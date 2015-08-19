@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Nuevo Escrutinio"
+        android:id="@+id/txtNvoEscrut"
+        android:textSize="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editTextCantSobres"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/txtNvoEscrut"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="Cantidad de Sobres" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editTextNumSobres"
+        android:layout_marginTop="44dp"
+        android:layout_below="@+id/editTextCantSobres"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="N° de Sobres" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextSeccion"
+        android:layout_marginTop="52dp"
+        android:hint="Sección"
+        android:layout_below="@+id/editTextNumSobres"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/editTextNumSobres"
+        android:layout_alignEnd="@+id/editTextNumSobres" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextCircuito"
+        android:layout_below="@+id/editTextSeccion"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="48dp"
+        android:layout_alignRight="@+id/editTextSeccion"
+        android:layout_alignEnd="@+id/editTextSeccion"
+        android:hint="Circuito" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Siguiente"
+        android:id="@+id/btnSiguienteFrg2"
+        android:layout_below="@+id/editTextCircuito"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="26dp"
+        android:layout_marginEnd="26dp" />
+</RelativeLayout>

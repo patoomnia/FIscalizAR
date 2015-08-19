@@ -1,10 +1,9 @@
 package com.perpetua.pato.fiscalizar;
 
 import android.app.Fragment;
+import android.app.FragmentManager;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -46,7 +45,7 @@ public class FragmentProvincia extends Fragment implements AdapterView.OnItemCli
         lProvincias.add("Santiago del Estero");
         lProvincias.add("Tierra Del Fuego");
         lProvincias.add("Tucuman");
-        listViewProvincias = (ListView) rootView.findViewById(R.id.ListProvincias);
+        listViewProvincias = (ListView) rootView.findViewById(R.id.ListMunicipios);
         ListAdapter adapter = new ListAdapter(getActivity(), lProvincias);
         listViewProvincias.setAdapter(adapter);
         // Set the onItemClickListener on the ListView to listen for items clicks
@@ -56,6 +55,14 @@ public class FragmentProvincia extends Fragment implements AdapterView.OnItemCli
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+        getActivity().setTitle(lProvincias.get(position));
+        Fragment defaultFragment = new FragmentMunicipio();
+        FragmentManager frgManager = getFragmentManager();
+        for(int i = 0; i < frgManager.getBackStackEntryCount(); ++i) {
+            frgManager.popBackStack();
+        }
+        frgManager.beginTransaction().replace(R.id.content_frame, defaultFragment).commit();
 
     }
 }

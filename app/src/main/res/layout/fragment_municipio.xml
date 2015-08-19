@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Seleccione una Provincia"
+        android:text="Seleccione un Municipio"
         android:id="@+id/textQueDeseaHacer"
         android:textSize="40sp"
         android:textColor="#000000"
